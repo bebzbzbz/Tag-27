@@ -86,37 +86,3 @@ if (susiSamDiv) {
     susiSamDiv.innerHTML += `<p>${susi.concat(" ", and, " ", infoAboutSam.replace("is", "are").replace("codingschool", "the gym and to the movie theater"))}</p>`
     susiSamDiv.innerHTML += `<p>${susi.concat(infoAboutSam.slice(3))} and to the movie theater</p>`
 }
-
-// ======== STRING BONUS ========
-
-let btn = document.querySelector("#search-button");
-
-btn?.addEventListener("click", searchReplace)
-
-function searchReplace () {
-    const searchInput = document.querySelector<HTMLInputElement>("#search-input")?.value;
-    let article = document.querySelector("article");
-    const searchOutput = `<span>${searchInput}</span>`
-    console.log(searchOutput);
-
-    // const result = article?.replaceAll(searchInput, searchOutput);
-    // console.log(result);
-
-    if (article && searchInput) {
-        console.log(article.innerHTML);
-        console.log(article.innerText);
-        article.innerHTML = article.innerText.replaceAll(searchInput, searchOutput)
-    }
-}
-
-// ======== NUMBER ========
-
-// let a = 15.16698.toString();
-// let b = 7.78714.toString();
-// let c = Number("12.3").toString();
-// let d = Number("3.14random").toString();
-// let e = Number("32px").toString();
-// let f = true;
-// let g = false;
-// let h = "321";
-// let i = "Supercode";
